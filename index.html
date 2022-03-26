@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Weather API"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<!--custom sheets/links-->
+<link rel="stylesheet" href="main.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="main.js" defer></script>
+<title>CURRENT WEATHER FORECAST APPLICATION</title>
+<style>
+    card-img-top {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 100px;
+  }
+
+  .overlay {
+    position: absolute;
+    color: rgb(158, 56, 56);
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: green;
+}
+
+.col:hover .overlay {
+    opacity: 0.6;
+}
+</style>
+</head>
+<body>
+    <div class="Nav-Bar">
+        <nav>
+          <ul class="nav_links">
+              <li><a href="http://www.bing.com"><div id="logo">AMIR'S ON THE SPOT WEATHER FORECAST</div></a></li>
+              <li><a href="http://www.bing.com">Home</a></li>
+              <li><a href="http://www.google.com">Features</a></li>
+              <li><a href="page3.html">Our Actors</a></li>
+              <li><a href="http://www.facebook.com">Mission</a></li>
+              <li><a href="http://www.facebook.com">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+   <section>
+    <form>
+        <div class="row">
+            <div class="col-auto cityname">
+                <label for="cityname" class="lettering">City Name</label> 
+                <input type="text" class="text" placeholder="Enter City Name" id="cityname">
+            </div>
+            <div class="col-auto zipcode">
+                <label for="zipcode" class="lettering">ZipCode</label> 
+                <input type="text" class="text" placeholder="Please Enter A ZipCode" id="zipcode">
+            </div>
+            <button type="button" class="btn btn-primary" onClick=getData()>Get Weather</button>
+        </div>
+    </form>
+    <!--WEATHER DATA CARDS-->
+    
+    <div class="col d-flex justify-content-center">
+        <div class="card-deck">   
+    <div class="card text-white bg-danger mb-3 "id="card-0" style="width: 18rem;" >
+        <img class="card-img-top" id="card-img-0" src="https://i.ibb.co/BPYZPtP/weather-background-icon-vector-87716.jpg" alt="CITY">
+        <div class="card-body"id="card-body-0">
+            <p class="card-text"id="card-text-0"></p>
+        </div>
+        </div>
+    <div class="card text-white bg-primary mb-3"id="card-1" style="width: 18rem;">
+        <div class="card-block">
+        <img class="card-img-top" id="card-img-1"src="https://i.ibb.co/BPYZPtP/weather-background-icon-vector-87716.jpg" alt="MAXIMUM TEMPERATURE">
+        <div class="card-body"id="card-body-1">
+          <p class="card-text"id="card-text-1"></p>
+        </div>
+      </div>
+    </div>
+      <div class="card text-white bg-danger mb-3"id="card-2" style="width: 18rem;">
+        <div class="card-block">
+        <img class="card-img-top"id="card-img-2" src="https://i.ibb.co/BPYZPtP/weather-background-icon-vector-87716.jpg" alt="MININUM TEMPERATURE">
+        <div class="card-body"id="card-body-2">
+          <p class="card-text"id="card-text-2"></p>
+        </div>
+      </div>
+      </div>
+      <div class="card text-white bg-primary mb-3"id="card-3" style="width: 18rem;">
+        <div class="card-block"> 
+        <img class="card-img-top"id="card-img-3" src="https://i.ibb.co/BPYZPtP/weather-background-icon-vector-87716.jpg" alt="FORECAST">
+        <div class="card-body"id="card-body-3">
+          <p class="card-text"id="card-text-3"></p>
+        </div>
+      </div>
+      </div>
+      <div class="card text-white bg-danger  mb-3"id="card-4" style="width: 18rem;">
+        <div class="card-block">
+        <img class="card-img-top"id="card-img-4"src="https://i.ibb.co/BPYZPtP/weather-background-icon-vector-87716.jpg"  alt="HUMIDITY">
+       
+        <div class="card-body"id="card-body-4">
+          <p class="card-text"id="card-text-4"></p>
+        </div>
+     
+        </div>
+    </div>
+    </div>
+   </section> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body{
+    background-image: url("https://i.ibb.co/PgbVhbZ/1540001.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.Nav-Bar{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#logo{
+padding-right: 350px;
+}
+
+.nav_links li{
+display:inline-block;
+list-style: none;
+margin-right: 2em;
+}
+
+
+.nav_links a{
+   text-decoration: none;
+   color: white;
+    transition: all 0.3s ease 0s;
+    
+}
+
+#logo{
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.nav_links li a:hover{
+    color: rgba(190, 6, 6,); 
+}
+
+.lettering{
+    color: white;
+}
+img {
+    border: 10px solid aliceblue;
+    border-radius: 25px;
+    padding: 5px;
+    width: 10px;
+    height: 10;
+  }
